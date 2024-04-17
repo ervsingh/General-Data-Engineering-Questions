@@ -1,0 +1,17 @@
+# Q1> Let's suppose I have 100 files in my hdfs application, and I have to read one time only, and I have to write 10 times. So which file format should I select while doing so?
+
+Ans:
+For a scenario where you need to read the data once but write it ten times,
+a columnar storage file format like Parquet would be a good choice.
+Parquet is efficient for both reading and writing, especially for analytical processing,
+as it allows for better compression and performance due to its columnar structure.
+
+# Q2> if I have to do like read 10 times and write 1 time, then what file I should select and why?
+
+Ans:If we need to read the data ten times and write it only once, using a file format like CSV might be more suitable.
+CSV (Comma-Separated Values) is a simple and widely supported text-based format.
+It is easy to read and can be more human-readable than binary formats like Parquet. In scenarios where we have frequent reads and occasional writes, 
+the simplicity of CSV might be advantageous.
+Keep in mind that CSV files might have larger sizes and slower performance compared to more optimized columnar storage formats like Parquet.
+
+# Q3> 
